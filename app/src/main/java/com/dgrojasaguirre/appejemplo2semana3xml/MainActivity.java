@@ -2,14 +2,15 @@ package com.dgrojasaguirre.appejemplo2semana3xml;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+// IMPORTANTE: Importar BottomNavigationView (no BottomNavigationItemView)
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,14 +25,36 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // creo mi boton el cual eredara de xml su id btnCalculadora
-        Button btnCalculadora = findViewById(R.id.bntCalculadora);
 
-        // este metodo me sirve para poder cambiar de activity de esta (this) a la que quiero ir (CalculadoraActivity) al clicar en el btn creado arriba..
-        btnCalculadora.setOnClickListener(b ->{
+        BottomNavigationView oNavegacion = findViewById(R.id.btnNavegacion);
+        oNavegacion.setOnItemSelectedListener(item -> {
+            Intent oIntento = null;
 
-            Intent oIntento = new Intent(this, CalculadoraACtivity.class);
+            if(item.getItemId() == R.id.itemInicio) { 
+
+            }
+            if(item.getItemId() == R.id.itemIncertar) {
+                oIntento = new Intent(this, InsertarActivity.class);
                 startActivity(oIntento);
-        } );
+
+            }
+            if(item.getItemId() == R.id.itemListar) {
+                oIntento = new Intent(this, ListadoActivity.class);
+                startActivity(oIntento);
+
+            }
+            if(item.getItemId() == R.id.itemEditar) {
+                oIntento = new Intent(this, EditarActivity.class);
+                startActivity(oIntento);
+
+            }
+            if(item.getItemId() == R.id.itemSalir) {
+
+                finishAffinity(); 
+
+            }
+
+            return false;
+        });
     }
 }

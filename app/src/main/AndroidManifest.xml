@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APPEJEMPLO2Semana3XML">
         <activity
+            android:name=".EditarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InsertarActivity"
+            android:exported="false" />
+        <activity
             android:name=".CalculadoraACtivity"
             android:exported="false" />
         <activity
