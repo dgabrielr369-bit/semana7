@@ -7,11 +7,13 @@ public class DAOEmergencia {
     private String nombreBD;
     private int version;
     private Activity actividad;
+    private BDHelper oHelper;
 
     public DAOEmergencia(Activity actividad){
         nombreBD="BDEmergencia";
         version=1;
         this.actividad=actividad;
+        oHelper =new BDHelper(actividad,nombreBD,null,version);
     }
 
 }
