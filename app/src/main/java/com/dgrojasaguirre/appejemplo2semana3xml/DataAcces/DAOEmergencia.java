@@ -3,6 +3,9 @@ package com.dgrojasaguirre.appejemplo2semana3xml.DataAcces;
 import android.app.Activity;
 import android.content.pm.VersionedPackage;
 
+import com.dgrojasaguirre.appejemplo2semana3xml.Models.Emergencia;
+
+
 public class DAOEmergencia {
     private String nombreBD;
     private int version;
@@ -15,5 +18,7 @@ public class DAOEmergencia {
         this.actividad=actividad;
         oHelper =new BDHelper(actividad,nombreBD,null,version);
     }
-
+    public boolean Insertar(Emergencia oe){
+        return false;
+    }
 }
