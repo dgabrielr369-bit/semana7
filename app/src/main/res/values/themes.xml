@@ -11,7 +11,7 @@
 
     <style name="title">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/upnColor</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowColor">@color/gris</item>
         <item name="android:shadowDx">5</item>

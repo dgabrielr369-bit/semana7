@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="SISTEMA REPORTE DE EMERGENCIA"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/black" />
 
     <ImageView
         android:id="@+id/imageView2"
