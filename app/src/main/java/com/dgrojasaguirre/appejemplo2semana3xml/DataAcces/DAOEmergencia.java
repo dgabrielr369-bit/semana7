@@ -33,7 +33,7 @@ public class DAOEmergencia {
             oValue.put("descripcion",oE.getDescripcion());
             oValue.put("tipo",oE.getTipo());
             oValue.put("nivel",oE.getNivel());
-            oValue.put("urgente",oE.isUrgente()?1:0);// es integer por lo que necesitamos convertir el bolean a 1 o 0 (integers)
+            oValue.put("urgente",oE.isUrgente()?1:0);
             oValue.put("foto",oE.getFoto());
 
             long fila =oBD.insert("Emergencia",null,oValue);

@@ -2,6 +2,7 @@ package com.dgrojasaguirre.appejemplo2semana3xml;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class activity_Listar_rv extends AppCompatActivity {
 
     private RecyclerView rvLista;
     private EditText txtBuscar;
+    private ImageButton btnBuscar;
     private DAOEmergencia oDAOEmergencia;
 
     @Override
@@ -32,9 +34,20 @@ public class activity_Listar_rv extends AppCompatActivity {
             return insets;
         });
         rvLista = findViewById(R.id.rvListaemergencia);
-        txtBuscar = findViewById(R.id.editTextText);
+        txtBuscar = findViewById(R.id.editText);
+        btnBuscar = findViewById(R.id.btnimgBuscar);
 
-        //Mostrar y ejecutar la flecha de retorno en el toolBar
+
+        txtBuscar.setOnClickListener(click -> {
+            txtBuscar.setText("");
+        });
+
+
+        btnBuscar.setOnClickListener(click -> {
+            filtrarLista();
+        });
+
+
         Toolbar oTbListar = findViewById(R.id.lb_ListarRV);
         setSupportActionBar(oTbListar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -46,5 +59,12 @@ public class activity_Listar_rv extends AppCompatActivity {
         oDAOEmergencia = new DAOEmergencia(this);
         rvLista.setLayoutManager(new LinearLayoutManager(this));
         rvLista.setAdapter(new EmergenciaAdapter(this, oDAOEmergencia.ListarTodos()));
+    }
+
+    private void filtrarLista() {
+        String filtro = txtBuscar.getText().toString().trim();
+        oDAOEmergencia = new DAOEmergencia(this);
+        rvLista.setLayoutManager(new LinearLayoutManager(this));
+        rvLista.setAdapter(new EmergenciaAdapter(this, oDAOEmergencia.ListarTodos(filtro)));
     }
 }

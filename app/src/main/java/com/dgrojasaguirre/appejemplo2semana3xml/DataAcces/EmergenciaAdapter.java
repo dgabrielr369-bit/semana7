@@ -42,6 +42,16 @@ public class EmergenciaAdapter extends RecyclerView.Adapter<EmergenciaAdapter.Em
         holder.lbItemtipo.setText("Tipo: " + oE.getTipo());
         holder.lbItemNivel.setText("Nivel: " + oE.getNivel());
         holder.lbUrgente.setText(oE.isUrgente() ? "Es Urgente" : "No es Urgente");
+
+        if (oE.isUrgente()) {
+            holder.itemView.setBackgroundTintList(contexto.getColorStateList(R.color.rojo_500));
+
+            holder.lbUrgente.setTextColor(contexto.getColor(R.color.white));
+        } else {
+            holder.itemView.setBackgroundTintList(contexto.getColorStateList(R.color.white));
+
+        }
+
         if (oE.getFoto() != null && oE.getFoto().length > 0) {
             Bitmap oImagen = BitmapFactory.decodeByteArray(oE.getFoto(), 0, oE.getFoto().length);
             holder.imgItemFoto.setImageBitmap(oImagen);

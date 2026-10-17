@@ -43,14 +43,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editText"
             android:layout_width="223dp"
             android:layout_height="48dp"
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:ems="10"
             android:inputType="text"
-            android:text="ingrese palabra para filtrar" />
+            android:hint="ingrese palabra para filtrar" />
 
         <ImageButton
             android:id="@+id/btnimgBuscar"
