@@ -6,12 +6,21 @@ public class Emergencia {
     private String tipo;
     private String nivel;
     private boolean urgente;
+    private byte[] foto;
 
     public Emergencia(String descripcion, String tipo, String nivel, boolean urgente) {
         this.descripcion = descripcion;
         this.tipo = tipo;
         this.nivel = nivel;
         this.urgente = urgente;
+    }
+
+    public Emergencia(String descripcion, String tipo, String nivel, boolean urgente, byte[] foto) {
+        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.nivel = nivel;
+        this.urgente = urgente;
+        this.foto = foto;
     }
 
     public int getIdEmergencia() {
@@ -32,6 +41,10 @@ public class Emergencia {
 
     public boolean isUrgente() {
         return urgente;
+    }
+
+    public byte[] getFoto() {
+        return foto;
     }
 
     @Override

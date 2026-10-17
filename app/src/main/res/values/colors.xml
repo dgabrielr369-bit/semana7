@@ -7,5 +7,6 @@
     <color name="rojo_300">#FF4081</color>
     <color name="gris">#808080</color>
     <color name="upnColor">#FFC107</color>
+    <color name="cardColor">#CC7373</color>
 
 </resources>

@@ -12,7 +12,7 @@ public class BDHelper extends SQLiteOpenHelper {
             "descripcion Varchar(150) NOT NULL,"+
             "tipo VARCHAR(20) NOT NULL,"+
             "nivel VARCHAR(20) NOT NULL,"+
-            "urgente INTEGER NOT NULL)";
+            "urgente INTEGER NOT NULL,foto BLOB)";
 
     public BDHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);

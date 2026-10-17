@@ -2,6 +2,8 @@ package com.dgrojasaguirre.appejemplo2semana3xml;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        Toast.makeText(this, "prueba", Toast.LENGTH_LONG).show();
+        new CountDownTimer(10000, 3000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Toast.makeText(MainActivity.this, "prueba", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFinish() {
+            }
+        }.start();
 
         BottomNavigationView oNavegacion = findViewById(R.id.btnNavegacion);
         oNavegacion.setOnItemSelectedListener(item -> {
@@ -36,17 +49,17 @@ public class MainActivity extends AppCompatActivity {
             if(item.getItemId() == R.id.itemIncertar) {
                 oIntento = new Intent(this, InsertarActivity.class);
                 startActivity(oIntento);
-
+                return true;
             }
             if(item.getItemId() == R.id.itemListar) {
                 oIntento = new Intent(this, ListadoActivity.class);
                 startActivity(oIntento);
-
+                return true;
             }
             if(item.getItemId() == R.id.itemEditar) {
                 oIntento = new Intent(this, EditarActivity.class);
                 startActivity(oIntento);
-
+                return true;
             }
             if(item.getItemId() == R.id.itemSalir) {
 

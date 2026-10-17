@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APPEJEMPLO2Semana3XML">
         <activity
+            android:name=".activity_Listar_rv"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_listar_rv"
+            android:exported="false" />
+        <activity
+            android:name=".Models.Activity_listar_rv"
+            android:exported="false" />
+        <activity
             android:name=".EditarActivity"
             android:exported="false" />
         <activity
