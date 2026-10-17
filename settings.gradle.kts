@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "APPEJEMPLO2 semana3XML"
+rootProject.name = "T2Rojasd"
 include(":app")
