@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
             if(item.getItemId() == R.id.itemListar) {
-                oIntento = new Intent(this, ListadoActivity.class);
+                oIntento = new Intent(this, activity_Listar_rv.class);
                 startActivity(oIntento);
                 return true;
             }
