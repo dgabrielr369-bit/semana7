@@ -36,9 +36,9 @@ public class Emergencia {
 
     @Override
     public String toString() {
-        return "Emergencia:" + " descripcion" +
+        return "Emergencia: " + descripcion +
                 " de tipo='" + tipo  +
-                " y nivel='"  + nivel + (isUrgente()?" y es URGENTE":" y no es urgente");
+                "' y nivel='"  + nivel + "'" + (isUrgente()?" y es URGENTE":" y no es urgente");
     }
 }
 

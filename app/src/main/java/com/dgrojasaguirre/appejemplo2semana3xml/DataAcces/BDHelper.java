@@ -11,7 +11,7 @@ public class BDHelper extends SQLiteOpenHelper {
     private String tabla_Emergencia="CREATE TABLE Emergencia(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
             "descripcion Varchar(150) NOT NULL,"+
             "tipo VARCHAR(20) NOT NULL,"+
-            "nive VARCHAR(20) NOT NULL,"+
+            "nivel VARCHAR(20) NOT NULL,"+
             "urgente INTEGER NOT NULL)";
 
     public BDHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {

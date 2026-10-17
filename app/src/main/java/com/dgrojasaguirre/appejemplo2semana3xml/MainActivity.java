@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             Intent oIntento = null;
 
             if(item.getItemId() == R.id.itemInicio) { 
-
+                return true;
             }
             if(item.getItemId() == R.id.itemIncertar) {
                 oIntento = new Intent(this, InsertarActivity.class);
