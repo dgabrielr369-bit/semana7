@@ -2,8 +2,6 @@ package com.dgrojasaguirre.appejemplo2semana3xml;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +9,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-// IMPORTANTE: Importar BottomNavigationView (no BottomNavigationItemView)
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,18 +23,6 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        Toast.makeText(this, "prueba", Toast.LENGTH_LONG).show();
-        new CountDownTimer(10000, 3000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                Toast.makeText(MainActivity.this, "prueba", Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onFinish() {
-            }
-        }.start();
 
         BottomNavigationView oNavegacion = findViewById(R.id.btnNavegacion);
         oNavegacion.setOnItemSelectedListener(item -> {
